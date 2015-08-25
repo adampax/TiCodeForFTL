@@ -1,0 +1,13 @@
+'#win': {
+	title: 'Map'
+}
+
+
+'#mapview': {
+	region: {
+		latitude: 26.118160,
+		longitude: -80.142047,
+		latitudeDelta: 0.5,
+		longitudeDelta: 0.5
+	}
+}

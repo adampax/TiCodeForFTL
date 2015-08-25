@@ -23,6 +23,8 @@ $.container.animate({
 //our event listeners wired to each control in xml
 
 function openMap() {
+	var v = Alloy.createController('projects/map').getView();
+	Alloy.Globals.tabgroup.activeTab.open(v);
 }
 
 
