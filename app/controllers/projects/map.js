@@ -5,7 +5,7 @@ var args = arguments[0] || {};
 var xhr = require('xhr');
 var Map = require('ti.map');
 
-var points = xhr.send({
+xhr.send({
 	url : 'https://raw.githubusercontent.com/CodeForFtL/ftlviz/master/cip_projects_pt.geojson',
 	method : 'GET',
 	success : addPointsToMap,
