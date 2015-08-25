@@ -5,6 +5,8 @@ const API_KEY = 'get yours here: https://secure.meetup.com/meetup_api/key/';
 var xhr = require('xhr');
 var moment = require('alloy/moment');
 
+
+//format the date range according to meetup.com's api requirement
 var timeRange = moment().subtract(6, 'months').valueOf() + ',' + moment().add(6, 'months').valueOf();
 
 xhr.send({
@@ -13,7 +15,6 @@ xhr.send({
 	success : addRows,
 	error : function(err) {
 		console.log(err);
-		//alert('Something happened when retrieving the meetup data');
 		$.table.setData([Ti.UI.createTableViewRow({
 			title : 'Something happened with the meetup.com api fetch'
 		})]);
@@ -22,11 +23,12 @@ xhr.send({
 
 function addRows(res) {
 	var rows = [];
+	
+	res.results.reverse();
 	res.results.forEach(function(r) {
-		console.log(moment(r.time).toDate());
 		
 		rows.push(Ti.UI.createTableViewRow({
-			title: moment(r.time).format('HH:mm:ss MM/DD/YY')
+			title: moment(r.time).format('MM/DD/YY') + ' - ' + r.name
 		}));
 		
 		$.table.setData(rows);
