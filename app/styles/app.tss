@@ -15,12 +15,13 @@ overrode the settings with other TSS, XML, or JS settings:
 	color: '#000' // all platforms except Android default to black
 }
 
-'Window': {
-	backgroundColor: '#fff' // white background instead of default transparent
-}
 
 'TextField[platform=android]': {
 	height: Ti.UI.SIZE //
 }
 
 */
+
+'Window': {
+	backgroundColor: '#fff' // white background instead of default transparent
+}
