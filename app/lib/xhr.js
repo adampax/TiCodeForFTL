@@ -8,7 +8,7 @@
  * @param {Function} args.error 		error callback 
  */
 
-var _ = require('lib/underscore');
+var _ = require('alloy/underscore');
 
 exports.send = function(args) {
 	var request = Titanium.Network.createHTTPClient();
