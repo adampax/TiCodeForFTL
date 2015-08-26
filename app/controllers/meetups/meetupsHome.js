@@ -32,4 +32,8 @@ function transformModel(model) {
     return transform;	
 }
 
+function rowClick(e) {
+		var v = Alloy.createController('meetups/detail', e).getView();
+		Alloy.Globals.tabgroup.activeTab.open(v);
+}
 

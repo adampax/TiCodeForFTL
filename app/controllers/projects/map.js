@@ -37,3 +37,8 @@ function addPointsToMap(obj) {
 		}
 	});
 }
+
+function closeWindow(){
+	$.win.close();
+}
+
