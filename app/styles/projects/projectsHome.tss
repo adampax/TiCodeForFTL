@@ -10,7 +10,7 @@
 }
 
 '#logo': {
-	image: 'images/codeforftl.png',
+	image: '/images/codeforftl.png',
 	top:20,
 	opacity:0
 }
