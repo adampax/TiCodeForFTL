@@ -12,7 +12,9 @@ var timeRange = moment().subtract(6, 'months').valueOf() + ',' + moment().add(6,
 xhr.send({
 	url : 'https://api.meetup.com/2/events?key=' + API_KEY + '&group_urlname=Code-for-FTL&sign=true&status=upcoming,past&time=' + timeRange,
 	method : 'GET',
-	success : addRows,
+	success : function(res){
+		Alloy.Collections.meetups.reset(res.results);
+	},
 	error : function(err) {
 		console.log(err);
 		$.table.setData([Ti.UI.createTableViewRow({
@@ -21,18 +23,13 @@ xhr.send({
 	}
 });
 
-function addRows(res) {
-	var rows = [];
-	
-	res.results.reverse();
-	res.results.forEach(function(r) {
-		
-		rows.push(Ti.UI.createTableViewRow({
-			title: moment(r.time).format('MM/DD/YY') + ' - ' + r.name
-		}));
-		
-		$.table.setData(rows);
-		
-	});
+function transformModel(model) {
+    //console.log(model.toJSON());
+    transform = model.toJSON();
+    transform.time = moment(transform.time).format('MM/DD/YY');
+    transform.rsvp = 'RSVPs: ' + transform.yes_rsvp_count;
+    
+    return transform;	
 }
+
 
