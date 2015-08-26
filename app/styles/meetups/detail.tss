@@ -1,3 +1,7 @@
+'Label':{
+	color:'#000000'
+}
+
 '#win':{
 	layout:'vertical'
 },
