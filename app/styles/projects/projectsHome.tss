@@ -17,6 +17,7 @@
 
 '#container': {
 	//borderColor:'black',
+	layout:'vertical',
 	height: 180,
 	top:90,
 	opacity:0

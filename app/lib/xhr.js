@@ -19,6 +19,7 @@ exports.send = function(args) {
 				response = JSON.parse(this.responseText);
 			} catch(e) {
 				Ti.API.warn('Unable to parse JSON for xhr(): ' + JSON.stringify(e));
+				response = this.responseText;
 			}
 		
 		if(_.isFunction(args.success)){

@@ -21,4 +21,7 @@ function openMap() {
 	Alloy.Globals.tabgroup.activeTab.open(v);
 }
 
-
+function openTrolley() {
+	var v = Alloy.createController('projects/trolleyHome').getView();
+	Alloy.Globals.tabgroup.activeTab.open(v);
+}

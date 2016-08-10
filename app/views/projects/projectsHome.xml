@@ -2,7 +2,8 @@
 	<Window id='win'>
 		<ImageView id='logo' />
 		<View id='container'>
-			<Button id='map' titleid='button_map' onClick='openMap' />
+			<Button id='map' titleid='button_ftlviz' onClick='openMap' />
+			<Button id='map' titleid='button_suntrolley' onClick='openTrolley' />
 		</View>
 	</Window>
 </Alloy>

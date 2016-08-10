@@ -4,7 +4,8 @@
 	<string name='tab_projects'>Projects</string>
 	<string name='tab_meetups'>Meetups</string>
 	
-	<string name='button_map'>Quyen's Map</string>
+	<string name='trolley'>Trolley</string>
+	<string name='button_ftlviz'>CodeForFtL/ftlviz</string>
 	<string name='meetup_details'>Meetup Details</string>
-	
+	<string name='button_suntrolley'>Sun Trolley</string>
 </resources>
